@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Stepper from './components/Stepper';
 import Footer from './components/Footer'
 import FileUpload from './pages/File_upload';
+import ListChannel from './pages/ListChannel';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Stepper />
         <Routes>
           <Route path='/' exact element={<FileUpload />}/>
+          <Route path='/listChannel' element={<ListChannel />}/>
         </Routes>
         <Footer />
       </BrowserRouter>
