@@ -22,7 +22,7 @@ const Mapchannel = (props) => {
 	// const { Allchannels, setAllchannels, PrimaryChannel, setPrimaryChannel,
 	// 	DefaultChannel, setDefaultChannel } = useContext(ChannelContext);
 
-	const handleadd = (data, p, d, i) => {
+	const handleadd = (data, primary, defchan, index) => {
 
 	}
 	return (
@@ -71,7 +71,7 @@ const Mapchannel = (props) => {
 									inputProps={{ 'DM sans': 'Without label' }}
 									sx={mapstyles}
 									className={index + 200}
-									
+
 
 								>
 									<MenuItem value="">
@@ -87,8 +87,19 @@ const Mapchannel = (props) => {
 
 							</div>
 							<div>
-								{props.st === 2 ? <Button variant="outlined" className={index + 300} onClick={handleadd(data, primary, defchan, index)}>+ Add Backup Channels </Button> :
-									<Button variant="outlined" className={index + 300} onClick={handleadd(data, primary, defchan, index)}>Edit channels </Button>}
+								{/* {props.st === 2 ? <Button variant="outlined" className={index + 300} onClick={handleadd(data, primary, defchan, index)}>+ Add Backup Channels </Button> :
+									<Button variant="outlined" className={index + 300} onClick={handleadd(data, primary, defchan, index)}>Edit channels </Button>} */}
+								<Button sx={{
+									marginRight: '190px',
+									display: 'flex',
+									alignItems: 'center',
+									color: '#2F7EC7',
+									padding: '0px'
+								}}
+									onClick={handleadd(data, primary, defchan, index)}
+								>
+									+ Add Backup Channels
+								</Button>
 							</div>
 
 						</div >
